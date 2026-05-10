@@ -2,6 +2,14 @@
   "manifest_version": 3,
   "name": "Tab Count",
   "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{06bf8c37-c403-4b6e-8ad7-ea164a42f344}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
   "description": "Displays the total number of open tabs across all windows as a badge on the extension icon.",
   "permissions": [
     "tabs"
