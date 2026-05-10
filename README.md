@@ -1,6 +1,6 @@
 # Tab Count
 
-A Firefox extension that displays the total number of open tabs across all windows as a badge on the extension icon. I wrote this extension to crub my tab addiction.
+A Firefox extension that displays the total number of open tabs across all windows as a badge on the extension icon. I wrote this extension to curb my tab addiction.
 
 ## Badge Colors
 
