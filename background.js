@@ -19,24 +19,14 @@ function updateBadge(tabCount) {
   browser.action.setBadgeTextColor({ color: "#FFFFFF" });
 }
 
-browser.tabs.onCreated.addListener(() => {
+function refreshBadge() {
   browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
-});
+}
 
-browser.tabs.onRemoved.addListener(() => {
-  browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
-});
+browser.tabs.onCreated.addListener(refreshBadge);
+browser.tabs.onRemoved.addListener(refreshBadge);
+browser.tabs.onUpdated.addListener(refreshBadge);
+browser.windows.onCreated.addListener(refreshBadge);
+browser.windows.onRemoved.addListener(refreshBadge);
 
-browser.tabs.onUpdated.addListener(() => {
-  browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
-});
-
-browser.windows.onCreated.addListener(() => {
-  browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
-});
-
-browser.windows.onRemoved.addListener(() => {
-  browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
-});
-
-browser.tabs.query({}).then((tabs) => updateBadge(tabs.length));
+refreshBadge();
