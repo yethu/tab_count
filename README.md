@@ -7,7 +7,7 @@ A Firefox extension that displays the total number of open tabs across all windo
 | Tab Count | Color |
 |-----------|-------|
 | 1–10      | Green |
-| 11–99     | Orange |
+| 11–99     | Yellow |
 | 100+      | Red   |
 
 ## Installation
